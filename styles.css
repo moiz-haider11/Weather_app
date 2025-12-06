@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: 0.3s ease;
+}
+
+/* ---------- Background ---------- */
+body {
+    background: linear-gradient(135deg, #6bb8ff, #0050d8);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Dark Mode */
+body.dark {
+    background: linear-gradient(135deg, #0a0a0a, #1f1f1f);
+}
+
+/* ---------- Container (Glassmorphism) ---------- */
+.container {
+    width: 360px;
+    padding: 30px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .container {
+    background: rgba(40, 40, 40, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Heading ---------- */
+h2 {
+    margin-bottom: 22px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #003f9e;
+}
+
+body.dark h2 {
+    color: #d4e0ff;
+}
+
+/* ---------- Search Box ---------- */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.55);
+}
+
+body.dark .search-box input {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.search-box input:focus {
+    box-shadow: 0 0 8px rgba(0, 102, 255, 0.3);
+}
+
+.search-box button {
+    padding: 12px 16px;
+    border: none;
+    background: #0066ff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.search-box button:hover {
+    background: #004bcc;
+}
+
+/* ---------- Weather Card ---------- */
+.weather-card img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.details {
+    font-size: 15px;
+    color: #222;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+body.dark .details {
+    color: #eee;
+}
+
+/* ---------- Error ---------- */
+.error {
+    color: #ff4a4a;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ---------- Dark Mode Toggle Button ---------- */
+.toggle-btn {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+body.dark .toggle-btn {
+    background: #f3f3f3;
+    color: #111;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.05);
+}
